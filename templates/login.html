@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+        <html style="background-image: url('static/mm_background.jpg');">
+            <head>
+                <title>Forsyth - Lab 8</title>
+                <link rel="stylesheet" href="{{ url_for('static', filename='megaman.css') }}">
+                <link href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap" rel="stylesheet">
+                <link href="https://fonts.googleapis.com/css?family=Dosis:700" rel="stylesheet">
+                
+        </head>
+        <body>
+            <div class="body-div">
+            <h1 class="center">Lab 8 - Login Form</h1>
+            <br />
+            
+            <h2 class="center">Please login to enter MegaMan Online</h2>
+            <p class="center">Please login to access your account, modify options to your character and team.</p><br>
+            <p class="center redfont">NEW FEATURES:</p>
+                <p class="center">-out of game messages</p>
+                <p class="center">-team org charts</p>
+                <p class="center">-inventory trade market</p>
+            <p class="center">You're connected from: {{ ConIP.city }} </p> 
+                
+                <form action="/login" method="POST">
+                    <div class="login">
+                        <div class="login-screen">
+                            <div class="app-title">
+                                <h1>Login</h1>
+                                </div>
+                                {% if message %}
+                                    <div class="center redfont">
+                                        <p>{{message}}</p>
+                                    </div>
+                                {% endif %}
+                                <div class="login-form">
+                                <div class="control-group">
+                                				<input type="text" class="login-field" value="" placeholder="username" name="username">
+                                <label class="login-field-icon fui-user" for="login-name"></label></div>
+                                <div class="control-group">
+                                				<input type="password" class="login-field" value="" placeholder="password" name="password">
+                                <label class="login-field-icon fui-lock" for="login-pass"></label></div>
+                                <input type="submit" value="Log in" class="btn btn-primary btn-large btn-block">
+                            
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                
+                {% if error %}
+                  <p class="error"><strong>Error:</strong> {{ error }}
+                {% endif %}
+			</div>
+		</body>
+</html>

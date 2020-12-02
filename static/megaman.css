@@ -1,0 +1,147 @@
+.df table {
+  width: 800px;
+  border-collapse: collapse;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+.df th,
+.df td {
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+.df th {
+  text-align: left;
+}
+.df thead th {
+  background-color: #55608f;
+}
+.df tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.df tbody td {
+  position: relative;
+}
+.df tbody td:hover:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -9999px;
+  bottom: -9999px;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: -1;
+}
+#outer-div {
+    width: 100%;
+    text-align:center;
+}
+
+.imgcenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+#form-div {
+    height: 180px;
+    width: 280px;
+    margin-left: 180px;
+    text-align: left;
+}
+#ip2 {
+    border-radius: 25px;
+    border: 2px solid #3498db;
+    padding: 10px;
+    width: 180px;
+    height: 15px;    
+}
+.body-div {
+    height: 750px;
+    width: 550px;
+    display: inline-block;
+    padding: 3px;
+    background-color:#C0C0C0;
+    opacity: 0.75;
+    border-radius: 25px;
+    margin-left: 75px;
+}
+
+*.center {
+    font-family: 'Share Tech', sans-serif;
+    text-align: center;
+}
+
+
+*.redfont {
+    color: red;
+}
+
+.login {
+    margin: 20px auto;
+    width: 300px;
+}
+
+.login-screen {
+    background-color: #FFF;
+    padding: 20px;
+    border-radius: 5px
+}
+
+.app-title {
+    text-align: center;
+    color: #777;
+}
+
+.login-form {
+    text-align: center;
+}
+.control-group {
+    margin-bottom: 10px;
+}
+
+input {
+    text-align: center;
+    background-color: #ECF0F1;
+    border: 2px solid transparent;
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: 200;
+    padding: 10px 0;
+    width: 250px;
+    transition: border .5s;
+}
+
+input:focus {
+    border: 2px solid #3498DB;
+    box-shadow: none;
+}
+
+.btn {
+    border: 2px solid transparent;
+    background: #3498DB;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 25px;
+    padding: 10px 0;
+    text-decoration: none;
+    text-shadow: none;
+    border-radius: 3px;
+    box-shadow: none;
+    transition: 0.25s;
+    display: block;
+    width: 250px;
+    margin: 0 auto;
+}
+
+.btn:hover {
+    background-color: #2980B9;
+}
+
+.login-link {
+    font-size: 12px;
+    color: #444;
+    display: block;
+    margin-top: 12px;
+}

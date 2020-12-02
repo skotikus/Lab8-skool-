@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+        <html style="background-image: url('static/mm_background.jpg');">
+            <head>
+                <title>Forsyth - Lab 8</title>
+                <link rel="stylesheet" href="static/megaman.css">
+                <link href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap" rel="stylesheet">
+                <link href="https://fonts.googleapis.com/css?family=Dosis:700" rel="stylesheet">
+        </head>
+        <body>
+            <div class="body-div">
+            <h1 class="center">Lab 8 - Login Form</h1>
+            <br />
+            
+            <h2 class="center">You're logged in!</h2>
+            <p class="center">Enjoy your time on MegaMan Online</p><br>
+            <p class="center">You're connected from: {{ ConIP.city }} </p> 
+                
+                <form method="POST">
+                    <div class="login">
+                        <div class="login-screen">
+                            <div class="app-title">
+                                <h1>Logged in as: {{username}}</h1>
+                                </div>
+                                {% if message %}
+                                    <div class="center redfont">
+                                        <p>{{ message }}</p>
+                                    </div>
+                                {% endif %}
+                                <div class="login-form">
+                                    <div class="control-group">
+                                	    <input type="text" class="login-field" value="" placeholder="New Password" name="newPass">
+                                	    <input type="hidden" value={{userID}} name="userID">
+                                	    <input type="hidden" value={{username}} name="username">
+                                <input type="submit" value="Change Password" class="btn btn-primary btn-large btn-block" formaction="/changePassword"><br>
+                                <input type="submit" value="Check Logs" class="btn btn-primary btn-large btn-block" formaction="/logChecker"><br>
+                                <input type="submit" value="Log Out" class="btn btn-primary btn-large btn-block" formaction="/logout">
+                               
+                            </div>
+                        </div>
+                    </div>
+                </form>
+			</div>
+			{% if logs %}
+			    <div class="center">
+                    {{ logs|safe }}
+                </div>
+            {% endif %}
+		</body>
+</html>
